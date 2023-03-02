@@ -4,14 +4,27 @@ body{
 
 
 .nav{
+    height: 40px;
     background-color: antiquewhite;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;   
+    padding: 0 2em;
 }
 
-.nav li{
+.nav ul{
+    margin: 0;
     list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
 
+.nav a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
 }
