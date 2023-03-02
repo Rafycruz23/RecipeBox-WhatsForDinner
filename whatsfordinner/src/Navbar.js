@@ -1,9 +1,12 @@
+import {Link} from "react-router-dom"; //this replaces the a tags with Link, to move around pages. 
+
+
 export default function Navbar(){
     return <nav className="nav">
-        <a href="/">Logo</a>
+        <Link to="/">Logo</Link>
         <ul>
-            <li><a href="/plan">Plan My Meals</a></li>
-            <li><a href="/all">All Recipes</a></li>
+            <li><Link to="/plan">Plan My Meals</Link></li>
+            <li><Link to="/all">All Recipes</Link></li>
         </ul> 
     </nav>
 }
