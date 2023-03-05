@@ -2,7 +2,9 @@ body{
     margin: 0;
 }
 
-
+.container{
+    margin: 0;
+}
 .nav{
     height: 40px;
     background-color: antiquewhite;
