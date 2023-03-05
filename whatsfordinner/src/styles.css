@@ -30,3 +30,17 @@ body{
     text-decoration: none;
     color: black;
 }
+
+
+
+
+/* Carousel styling */
+
+.carousel, .slide{
+    height: 300px;
+    width: 300px;
+    margin-left: 400px;
+    background-color: antiquewhite;
+    
+    
+}
