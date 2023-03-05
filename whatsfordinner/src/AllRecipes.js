@@ -1,3 +1,10 @@
+import Navbar from "./Navbar"
+
 export default function AllRecipes(){
-    return <h1>AllRecipes is working</h1>
+    return <div>
+    <Navbar />
+    <h1>AllRecipes is working</h1>
+
+        
+    </div> 
 }

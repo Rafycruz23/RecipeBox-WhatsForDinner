@@ -1,3 +1,9 @@
+import Navbar from "./Navbar"
 export default function PlanMeals(){
-    return <h1>PlanMeals working</h1>
+    return<div>
+    <Navbar />
+    <h1>PlanMeals is working</h1>
+
+        
+    </div> 
 }
