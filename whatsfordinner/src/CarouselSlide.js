@@ -6,6 +6,9 @@ import salad from './assets/salad.jpeg';
 
 
 //Extracted the code below from Bootstrap Doc 
+
+//renamed class to className because that is what React needs to identify classes
+
 export default function CarouselSlide() {
 
   
