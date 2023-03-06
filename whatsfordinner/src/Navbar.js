@@ -26,21 +26,21 @@ const getRecipes = () => {
         </ul> 
     </nav>
 }
-import React from 'react';
+// import React from 'react';
 
-export default function Navbar(){
-    return (
-      <div className="nav">
-        <nav className="nav">
-          <Link to="/">Logo</Link>
-          <ul>
-            <li>
-              <Link to="/plan">Plan My Meals</Link>
-            </li>
-            <li>
-              <Link to="/all">All Recipes</Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    );};
+// export default function Navbar(){
+//     return (
+//       <div className="nav">
+//         <nav className="nav">
+//           <Link to="/">Logo</Link>
+//           <ul>
+//             <li>
+//               <Link to="/plan">Plan My Meals</Link>
+//             </li>
+//             <li>
+//               <Link to="/all">All Recipes</Link>
+//             </li>
+//           </ul>
+//         </nav>
+//       </div>
+//     );};

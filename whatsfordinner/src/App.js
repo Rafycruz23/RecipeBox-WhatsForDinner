@@ -11,7 +11,7 @@ export default function App() {
   return <div>
     <Navbar />
     <CarouselSlide />
-    <Route path='/PlanMeals' component={PlanMeals} />
+    {/* <Route path='/PlanMeals' component={PlanMeals} /> */}
   </div>
 };
 
