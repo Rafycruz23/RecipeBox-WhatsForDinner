@@ -5,7 +5,7 @@ import React from 'react';
 
 export default function PlanMeals(){
     return<div>
-        <Navbar />
+        {/* <Navbar /> */}
         <h1>PlanMeals is working</h1>
 
         
