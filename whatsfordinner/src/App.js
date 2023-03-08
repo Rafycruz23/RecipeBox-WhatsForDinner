@@ -1,8 +1,8 @@
 
 import Navbar from "./Navbar";
-import CarouselSlide from "./CarouselSlide";
+import Home from "./Home";
 import "./styles.css" 
-import {Link, Route, Routes} from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 import AllRecipes from './AllRecipes';
 import PlanMeals from './PlanMeals';
 import React from 'react';
@@ -27,7 +27,7 @@ export default function App () {
     <div>
       <Navbar />
       <Routes>
-        <Route path="/" element={<CarouselSlide />} />
+        <Route path="/" element={<Home />} />
         <Route path="/plan" element={<PlanMeals />} />
         <Route path="/all" element={<AllRecipes />} />
       </Routes>

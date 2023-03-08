@@ -1,38 +1,11 @@
 import logo from "./assets/Logo.png";
 import { Link } from "react-router-dom"; //this replaces the a tags with Link, to move around pages.
-import axios from "axios";
-import React, { useEffect } from "react";
-import useGetRecipes from "./useGetRecipes";
+// import React, { useEffect } from "react";
+// import useGetRecipes from "./useGetRecipes";
 
 export default function Navbar() {
-  //AXIOS used to GET data from API. NEEDS WORK!!!!! Link works but function itself not.
-
-  // const getRecipes= useEffect(()=> {
-  // const fetchData = async() => {
-  //   // const apiKey = "5a312119fa95425c8af9a9236717e2b5";
-  //   const response = await axios.get(
-  //     "https://api.spoonacular.com/recipes/random?apiKey=5a312119fa95425c8af9a9236717e2b5"
-  //   );
-  //   console.log(response.data);
-  // }
-  // fetchData();
-
-  // }, []);
-
-  // return (
-  //   <div>
-  //     <h1>hello</h1>
-  //   </div>
-  // );
-
-  // const getRecipes = () => {
-  //    const apiKey = "5a312119fa95425c8af9a9236717e2b5";
-  // axios.get('https://api.spoonacular.com/recipes/random?'+ apiKey).then(function
-  //         (response){
-  //         console.log(response);
-  //     })
-  // }
-  const recipes = useGetRecipes("");
+  
+  // const recipes = useGetRecipes("");
 
   return (
     <nav className="nav">
