@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"; //this replaces the a tags with Link, t
 
 export default function Navbar() {
   
-  // const recipes = useGetRecipes("");
+  const recipes = useGetRecipes("");
 
   return (
     <nav className="nav">
@@ -26,9 +26,9 @@ export default function Navbar() {
             placeholder="Search"
             aria-label="Search"
           />
-          {/* <button className="btn btn-outline-success" onClick={recipes}> */}
+          <button className="btn btn-outline-success" > 
             Search
-          {/* </button> */}
+         </button>
         </form>
       </ul>
     </nav>
