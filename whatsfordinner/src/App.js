@@ -27,7 +27,7 @@ export default function App () {
     <div>
       <Navbar />
       <Routes>
-        <Route path="/" element={<CarouselSlide/>}/>
+        <Route path="/" element={<CarouselSlide />} />
         <Route path="/plan" element={<PlanMeals />} />
         <Route path="/all" element={<AllRecipes />} />
       </Routes>
