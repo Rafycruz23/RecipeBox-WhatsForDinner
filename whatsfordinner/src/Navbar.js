@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"; //this replaces the a tags with Link, t
 
 export default function Navbar() {
   
-  const recipes = useGetRecipes("");
+  // const recipes = useGetRecipes("");
 
   return (
     <nav className="nav">
