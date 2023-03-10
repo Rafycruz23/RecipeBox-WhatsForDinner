@@ -46,10 +46,21 @@ body{
 /* Carousel styling */
 
 .carousel, .slide{
-    height: 300px;
-    width: 300px;
+    height: fit-content;
+    width: fit-content;
     margin-left: 400px;
-    background-color: antiquewhite;
     
-    
+}
+
+.carousel img{
+    opacity: .8;
+    width: 300px;
+    border-radius: 10px;
+}
+
+
+.carousel-caption{
+    color: white;
+    opacity: 1;
+
 }
