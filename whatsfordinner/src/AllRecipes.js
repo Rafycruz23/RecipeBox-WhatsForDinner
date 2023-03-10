@@ -8,6 +8,7 @@ export default function AllRecipes(){
 //when we call the useGetRecipes, we pass in whichever endpoint we want to call as the parameter, in this case the random endpoint.  
 
     const [randomRecipe] = useGetRecipes("random");
+    console.log(randomRecipe)
     
     return (
       <div>

@@ -1,7 +1,6 @@
 import React from 'react';
-import pancakeIMG from './assets/pancakeIMG.jpeg';
-import gambas from './assets/gambas.jpeg';
-import salad from './assets/salad.jpeg';
+import useGetRecipes from "./useGetRecipes";
+
 
 
 
@@ -11,6 +10,7 @@ import salad from './assets/salad.jpeg';
 
 export default function CarouselSlide() {
 
+  const [randomRecipe] = useGetRecipes("random");
   
 
   return <div id="carouselExampleCaptions" className="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -21,24 +21,21 @@ export default function CarouselSlide() {
   </div>
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img src={salad} className="d-block" alt="..."/>
+      <img src={randomRecipe.image} className="d-block" alt="..."/>
       <div className="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+        <h5>{randomRecipe.title}</h5>
       </div>
     </div>
     <div className="carousel-item">
-      <img src={gambas} className="d-block" alt="..."/>
+      <img src={randomRecipe.image} className="d-block" alt="..."/>
       <div className="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <h5>{randomRecipe.title}</h5>
       </div>
     </div>
     <div className="carousel-item">
-      <img src={pancakeIMG} className="d-block" alt="..."/>
+      <img src={randomRecipe.image} className="d-block" alt="..."/>
       <div className="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+        <h5>{randomRecipe.title}</h5>
       </div>
     </div>
   </div>
