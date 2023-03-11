@@ -45,22 +45,15 @@ body{
 
 /* Carousel styling */
 
-.carousel, .slide{
+.carousel{
     height: fit-content;
     width: fit-content;
-    margin-left: 400px;
+   
     
 }
 
-.carousel img{
+.carousel-item img{
     opacity: .8;
     width: 300px;
     border-radius: 10px;
-}
-
-
-.carousel-caption{
-    color: white;
-    opacity: 1;
-
 }

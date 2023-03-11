@@ -1,5 +1,6 @@
 import React from 'react';
 import useGetRecipes from "./useGetRecipes";
+import Carousel from 'react-bootstrap/Carousel'
 
 
 
@@ -8,45 +9,46 @@ import useGetRecipes from "./useGetRecipes";
 
 //renamed class to className because that is what React needs to identify classes
 
-export default function CarouselSlide() {
+function CarouselSlide() {
+  const [randomRecipe] = useGetRecipes("random")
+  const [randomRecipe1] = useGetRecipes("random")
+  const [randomRecipe2] = useGetRecipes("random")
+  return ( 
+    <Carousel slide={false}>
+      <Carousel.Item>
+        <img
+          className="d-block carousel"
+          src={randomRecipe.image}
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>{randomRecipe.title}</h3>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block carousel"
+          src={randomRecipe1.image}
+          alt="Second slide"
+        />
 
-  const [randomRecipe] = useGetRecipes("random");
-  
+        <Carousel.Caption>
+          <h3>{randomRecipe1.title}</h3>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block carousel"
+          src={randomRecipe2.image}
+          alt="Third slide"
+        />
 
-  return <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
-  <div className="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div className="carousel-inner">
-    <div className="carousel-item active">
-      <img src={randomRecipe.image} className="d-block" alt="..."/>
-      <div className="carousel-caption d-none d-md-block">
-        <h5>{randomRecipe.title}</h5>
-      </div>
-    </div>
-    <div className="carousel-item">
-      <img src={randomRecipe.image} className="d-block" alt="..."/>
-      <div className="carousel-caption d-none d-md-block">
-        <h5>{randomRecipe.title}</h5>
-      </div>
-    </div>
-    <div className="carousel-item">
-      <img src={randomRecipe.image} className="d-block" alt="..."/>
-      <div className="carousel-caption d-none d-md-block">
-        <h5>{randomRecipe.title}</h5>
-      </div>
-    </div>
-  </div>
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Previous</span>
-  </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Next</span>
-  </button>
-</div>
-  
+        <Carousel.Caption>
+          <h3>{randomRecipe2.title}</h3>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+  );
 }
+
+export default CarouselSlide;

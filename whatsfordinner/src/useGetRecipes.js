@@ -15,6 +15,7 @@ function useGetRecipes(endpoint) {
    };
    fetchData();
    console.log(newRecipe.summary);
+   console.log(typeof(newRecipe))
  }, []);
  return [newRecipe]
 }
