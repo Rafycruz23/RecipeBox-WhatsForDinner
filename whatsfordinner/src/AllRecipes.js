@@ -1,20 +1,26 @@
 import "./styles.css" 
 import useGetRecipes from "./useGetRecipes";
+import Card from 'react-bootstrap/Card'
+
 // import React, {useEffect, useState} from "react";
 
 export default function AllRecipes(){
-
-//when we call the useGetRecipes, we pass in whichever endpoint we want to call as the parameter, in this case the random endpoint.  
 
     const [randomRecipe] = useGetRecipes("random");
     console.log(randomRecipe)
     
     return (
       <div>
-        <h1>AllRecipes is working</h1>
-        {/* <button onClick={useGetRecipes('random')}>Click</button> */}
-        <p>{randomRecipe.title}</p>
-        <p>{randomRecipe.summary}</p>
+        <Card className="card-container">
+          <Card.Img className="card-image" variant="top" src={randomRecipe.image}/>
+      <Card.Body>
+        <Card.Title>{randomRecipe.title}</Card.Title>
+        <Card.Subtitle className="mb-2 text-muted">Health Score: {randomRecipe.healthScore}</Card.Subtitle>
+        <Card.Text>
+          {randomRecipe.summary} 
+        </Card.Text>
+      </Card.Body>
+    </Card>
       </div>
     );
 }

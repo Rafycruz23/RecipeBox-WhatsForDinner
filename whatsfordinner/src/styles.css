@@ -57,3 +57,18 @@ body{
     width: 300px;
     border-radius: 10px;
 }
+
+
+/* Bootstrap Card Element in ALLRECIPES.js */
+
+.card-container{
+    margin-top: 50px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image{
+    width:300px;
+}

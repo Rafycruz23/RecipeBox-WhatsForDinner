@@ -3,7 +3,7 @@ import React from 'react';
 import useGetRecipes from "./useGetRecipes";
 
 export default function PlanMeals(){
-    const [randomRecipe] = useGetRecipes("complexSearch");
+    const [randomRecipe] = useGetRecipes("random");
     console.log(randomRecipe)
     
     return (
