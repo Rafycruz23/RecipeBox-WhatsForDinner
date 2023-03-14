@@ -1,6 +1,5 @@
 import logo from "./assets/Logo.png";
 import { Link } from "react-router-dom"; //this replaces the a tags with Link, to move around pages.
-import SearchRecipes from "./SearchRecipes";
 // import React, { useEffect } from "react";
 // import useGetRecipes from "./useGetRecipes";
 
@@ -27,7 +26,7 @@ export default function Navbar() {
             placeholder="Search"
             aria-label="Search"
           />
-          <button className="btn btn-outline-success"  type="submit" onSubmit={SearchRecipes}> 
+          <button className="btn btn-outline-success"  type="submit"> 
             Search
          </button>
         </form>

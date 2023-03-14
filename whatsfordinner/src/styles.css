@@ -62,8 +62,8 @@ body{
 /* Bootstrap Card Element in ALLRECIPES.js */
 
 .card-container{
-    margin-top: 50px;
-    margin-left: 700px;
+    
+    margin: 50px 500px;
     width: 500px;
     display: flex;
     justify-content: center;
@@ -74,4 +74,23 @@ body{
     margin-top: 10px;
     border-radius: 10px;
     width:300px;
+}
+
+
+.footer{
+
+    width: 100%;
+    bottom: 0px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: antiquewhite;
+}
+
+.footer,p{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin: 0px;
 }

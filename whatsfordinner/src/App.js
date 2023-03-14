@@ -6,20 +6,8 @@ import {Route, Routes} from 'react-router-dom';
 import AllRecipes from './AllRecipes';
 import PlanMeals from './PlanMeals';
 import React from 'react';
+import Footer from "./Footer";
 
-
-// export default function App() {
-//   return (
-//     <div>
-      
-//         <Route path="/navbar" component={Navbar} />
-      
-//       {/* <Navbar />
-//     <CarouselSlide /> */}
-//       {/* <Route path='/PlanMeals' component={PlanMeals} /> */}
-//     </div>
-//   );
-// };
 
 export default function App () {
   return (
@@ -31,6 +19,7 @@ export default function App () {
         <Route path="/plan" element={<PlanMeals />} />
         <Route path="/all" element={<AllRecipes />} />
       </Routes>
+      <Footer/>
     </div>
   );
 }
