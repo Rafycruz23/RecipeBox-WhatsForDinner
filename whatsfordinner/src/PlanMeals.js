@@ -1,20 +1,20 @@
-import "./styles.css" 
-import React from 'react';
-import useGetRecipes from "./useGetRecipes";
+// import "./styles.css" 
+// import React from 'react';
+// import useGetRecipes from "./useGetRecipes";
 
-export default function PlanMeals(){
-    const [randomRecipe] = useGetRecipes("random");
-    console.log(randomRecipe)
+// export default function PlanMeals(){
+//     const [randomRecipe] = useGetRecipes("random");
+//     console.log(randomRecipe)
     
-    return (
-      <div>
-        <h1>PlanMeals is working</h1>
-        {/* <button onClick={useGetRecipes('random')}>Click</button> */}
-        <p>{randomRecipe.title}</p>
-        <p>{randomRecipe.summary}</p>
-      </div>
-    );
-    };
+//     return (
+//       <div>
+//         <h1>PlanMeals is working</h1>
+//         {/* <button onClick={useGetRecipes('random')}>Click</button> */}
+//         <p>{randomRecipe.title}</p>
+//         <p>{randomRecipe.summary}</p>
+//       </div>
+//     );
+//     };
 import React, {useEffect, useState} from 'react';
 import useGetRecipes
  from "./useGetRecipes";
@@ -22,8 +22,8 @@ import useGetRecipes
 
 export default function PlanMeals(){
 
-    // const [randomRecipe] = useGetRecipes("random");
-//     const [recipeSummary, setRecipeSummary] = useState("");
+    const [randomRecipe] = useGetRecipes("random");
+    const [recipeSummary, setRecipeSummary] = useState("");
 
 //     useEffect(() => {
 //    const fetchData = async () => {

@@ -7,13 +7,13 @@ import axios from "axios";
 
  function useGetRecipes(endpoint) {
  const [newRecipe, setRecipe] = useState({});
- const apiKey = "5a312119fa95425c8af9a9236717e2b5";
-
+//  const apiKey = "5a312119fa95425c8af9a9236717e2b5";
+const apiKey = "8959366c723444e08598151392a0775e";
  useEffect(() => {
    const fetchData = async () => {
      const response = await axios.get(
-       `https://api.spoonacular.com/recipes/${endpoint}?apiKey=`+ apiKey
-       `https://api.spoonacular.com/recipes/${endpoint}?apiKey=8959366c723444e08598151392a0775e`
+       `https://api.spoonacular.com/recipes/${endpoint}?apiKey=${apiKey}`
+      
      );
      setRecipe(response.data.recipes[0]);
    };
