@@ -63,6 +63,7 @@ body{
 
 .card-container{
     margin-top: 50px;
+    margin-left: 700px;
     width: 500px;
     display: flex;
     justify-content: center;
@@ -70,5 +71,7 @@ body{
 }
 
 .card-image{
+    margin-top: 10px;
+    border-radius: 10px;
     width:300px;
 }
