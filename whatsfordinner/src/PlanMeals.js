@@ -15,44 +15,38 @@
 //       </div>
 //     );
 //     };
-import React, {useEffect, useState} from 'react';
-import useGetRecipes
- from "./useGetRecipes";
- import axios from "axios";
+import React from 'react';
+import useGetRecipes from "./useGetRecipes";
+ 
 
 export default function PlanMeals(){
 
     const [randomRecipe] = useGetRecipes("random");
-    const [recipeSummary, setRecipeSummary] = useState("");
-
-//     useEffect(() => {
-//    const fetchData = async () => {
-//      const response = await axios.get(
-//        `https://api.spoonacular.com/recipes/${randomRecipe.id}/summary/?apiKey=8959366c723444e08598151392a0775e`
-//      );
-//      setRecipeSummary(response.data.recipes[0]);
-//    };
-//    fetchData();
-//    console.log(recipeSummary.summary);
-//  }, []);
-//  return [recipeSummary]
-
+   
     return(
 
-
-
-    <div>
-        {/* <h1>PlanMeals is working</h1> */}
-        <div className="card" style={{width: '18rem'}}>
-  <img src={randomRecipe.image} className="card-img-top" alt=""/>
-  <div className="card-body">
-    <h5 className="card-title">{randomRecipe.title}</h5>
-    <p className="card-text">{randomRecipe.summary}</p>
-    <a href={randomRecipe.sourceUrl} className="btn btn-primary" target="_blank">Get Recipe</a>
+//this is taking the randomRecipe object and converting it to an array so that it can be mapped over. However, it is only generating one recipe and displaying it 7 times
+        <div>
+        {Object.values(randomRecipe).slice(0, 7).map(recipe => (
+   
+            <div className="card" style={{width: '18rem'}}>     
+            <img src={randomRecipe.image} className="card-img-top" alt=""/>
+            <div className="card-body">
+              <h5 className="card-title">{recipe.title}</h5>
+              <p className="card-text">{recipe.summary}</p>
+              <a href={recipe.sourceUrl} className="btn btn-primary" target="_blank">Get Recipe</a>
+            </div>
+            </div>
+            ))};
   </div>
-</div>
+
+    
+  );
+}
+
+    
 
         
-    </div> 
-    )
-}
+    
+    
+
