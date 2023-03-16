@@ -66,11 +66,18 @@ body{
 }
 
 
-/* Bootstrap Card Element in ALLRECIPES.js */
+/* Bootstrap Card Element */
+
+.plan-meal{
+    
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 .card-container{
     
-    margin: 100px 500px 100px;
+    margin: 50px 20px 50px 20px;
     width: 500px;
     display: flex;
     justify-content: center;

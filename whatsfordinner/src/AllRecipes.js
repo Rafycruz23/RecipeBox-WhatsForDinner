@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card'
 
 export default function AllRecipes(){
 
-    const [randomRecipe] = useGetRecipes("random");
+    const [randomRecipe] = useGetRecipes("random", 1);
     console.log(randomRecipe)
     
     return (

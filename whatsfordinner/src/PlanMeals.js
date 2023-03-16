@@ -1,6 +1,7 @@
 
 import React from 'react';
 import useGetRecipes from "./useGetRecipes";
+import Card from 'react-bootstrap/Card';
  
 
 export default function PlanMeals(){
@@ -12,17 +13,17 @@ export default function PlanMeals(){
     return(
 
       //this works, but looks terrible!
-        <div>
+        <div className='plan-meal'>
         {randomRecipe.map(recipe => (
    
-            <div className="card" style={{width: '18rem'}}>     
-            <img src={recipe.image} className="card-img-top" alt=""/>
-            <div className="card-body">
-              <h5 className="card-title">{recipe.title}</h5>
-              <p className="card-text">{recipe.summary}</p>
-              <a href={recipe.sourceUrl} className="btn btn-primary" target="_blank">Get Recipe</a>
-            </div>
-            </div>
+            <Card className="card-container">     
+            <Card.Img src={recipe.image} className="card-image" alt=""/>
+            <Card.Body>
+              <Card.Title className="card-title">{recipe.title}</Card.Title>
+              <Card.Text className="card-text">{recipe.summary}</Card.Text>
+              <Card.Link href={recipe.sourceUrl} className="btn btn-primary" target="_blank">Get Recipe</Card.Link>
+            </Card.Body>
+            </Card>
             ))};
   </div>
 
