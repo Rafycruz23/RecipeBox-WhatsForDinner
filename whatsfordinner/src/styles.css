@@ -45,14 +45,21 @@ body{
 
 /* Carousel styling */
 
-.carousel{
-    height: fit-content;
-    width: fit-content;
-   
-    
+.home-container{
+    height: 100vh;
+    display: flex;
+    justify-content:center
 }
 
+.carousel{
+    margin-top: 50px;
+    height: fit-content;
+    width: fit-content;    
+}
+
+
 .carousel-item img{
+    height: 300px;
     opacity: .8;
     width: 300px;
     border-radius: 10px;
@@ -63,7 +70,7 @@ body{
 
 .card-container{
     
-    margin: 50px 500px;
+    margin: 100px 500px 100px;
     width: 500px;
     display: flex;
     justify-content: center;
@@ -80,11 +87,9 @@ body{
 .footer{
 
     width: 100%;
-    bottom: 0px;
     height: 100px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    position:relative;
+    
     background-color: antiquewhite;
 }
 

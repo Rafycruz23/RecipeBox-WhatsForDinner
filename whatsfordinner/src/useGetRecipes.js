@@ -18,8 +18,8 @@ const apiKey = "8959366c723444e08598151392a0775e";
      setRecipe(response.data.recipes[0]);
    };
    fetchData();
-   console.log(newRecipe.summary);
-   console.log(typeof(newRecipe))
+  //  console.log(newRecipe.summary);
+  //  console.log(typeof(newRecipe))
  }, []);
  return [newRecipe]
 };

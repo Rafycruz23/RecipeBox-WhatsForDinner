@@ -5,7 +5,7 @@ import CarouselSlide from "./CarouselSlide";
 export default function Home() {
 
   return (
-    <div>
+    <div className='home-container'>
     <CarouselSlide/>
     </div>
   )
