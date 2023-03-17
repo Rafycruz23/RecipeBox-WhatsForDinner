@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Home from "./Home";
 import "./styles.css" 
 import {Route, Routes} from 'react-router-dom';
-import AllRecipes from './AllRecipes';
+import FeelingLucky from "./FeelingLucky";
 import PlanMeals from './PlanMeals';
 import React from 'react';
 import Footer from "./Footer";
@@ -17,7 +17,7 @@ export default function App () {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/plan" element={<PlanMeals />} />
-        <Route path="/all" element={<AllRecipes />} />
+        <Route path="/all" element={<FeelingLucky />} />
       </Routes>
       <Footer/>
     </div>

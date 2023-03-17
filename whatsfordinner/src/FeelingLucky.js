@@ -1,12 +1,12 @@
 import "./styles.css" 
-import useGetRecipes from "./useGetRecipes";
+import useSearchRecipes from "./useSearchRecipes";
 import Card from 'react-bootstrap/Card'
 
 // import React, {useEffect, useState} from "react";
 
-export default function AllRecipes(){
+export default function FeelingLucky(){
 
-    const [randomRecipe] = useGetRecipes("random", 1);
+    const [randomRecipe] = useSearchRecipes("random");
     console.log(randomRecipe)
     
     return (

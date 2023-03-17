@@ -1,18 +1,12 @@
 import React from 'react';
-import useGetRecipes from "./useGetRecipes";
+import useSearchRecipes from './useSearchRecipes';
 import Carousel from 'react-bootstrap/Carousel'
 
-
-
-
-//Extracted the code below from Bootstrap Doc 
-
-//renamed class to className because that is what React needs to identify classes
-
 function CarouselSlide() {
-  const [randomRecipe] = useGetRecipes("random")
-  const [randomRecipe1] = useGetRecipes("random")
-  const [randomRecipe2] = useGetRecipes("random")
+  const [randomRecipe] = useSearchRecipes("random");
+  const [randomRecipe1] = useSearchRecipes("random");
+  const [randomRecipe2] = useSearchRecipes("random");
+  
   return ( 
     <Carousel slide={false}>
       <Carousel.Item>
@@ -30,7 +24,7 @@ function CarouselSlide() {
           className="d-block carousel"
           src={randomRecipe1.image}
           alt="Second slide"
-        />
+        /> 
 
         <Carousel.Caption>
           <h3>{randomRecipe1.title}</h3>
