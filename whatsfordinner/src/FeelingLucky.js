@@ -8,6 +8,10 @@ export default function FeelingLucky(){
 
     const [randomRecipe] = useSearchRecipes("random");
     console.log(randomRecipe)
+
+     function removeTags(text) {
+       return text.replace(/<\/?[^>]+(>|$)/g, "");
+     }
     
     return (
       <div>
@@ -17,7 +21,7 @@ export default function FeelingLucky(){
         <Card.Title>{randomRecipe.title}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">Health Score: {randomRecipe.healthScore}</Card.Subtitle>
         <Card.Text>
-          {randomRecipe.summary} 
+          {removeTags(randomRecipe.summary)} 
         </Card.Text>
       </Card.Body>
     </Card>
