@@ -24,7 +24,9 @@ export default function PlanMeals(){
             <Card.Img src={recipe.image} className="card-image" alt="" />
             <Card.Body>
               <Card.Title className="card-title">{recipe.title}</Card.Title>
-              <Card.Text className="card-text">{removeTags(recipe.summary)}</Card.Text>
+              <Card.Text className="card-text">
+              {removeTags(recipe.summary)}
+              </Card.Text>
               <Card.Link
                 href={recipe.sourceUrl}
                 className="btn btn-primary"

@@ -1,30 +1,38 @@
 import "./styles.css" 
 import useSearchRecipes from "./useSearchRecipes";
 import Card from 'react-bootstrap/Card'
-
-// import React, {useEffect, useState} from "react";
+import React from "react";
 
 export default function FeelingLucky(){
 
     const [randomRecipe] = useSearchRecipes("random");
-    console.log(randomRecipe)
+    // console.log(randomRecipe)
 
+
+    //I don't know why the removeTags function didn't work the same way it was working in planmeals. For some reason it was throwing an error because of the replace method. So this function is altered to first check if the text parameter is defined before executing the replace. I don't know why, but this works. 
      function removeTags(text) {
-       return text.replace(/<\/?[^>]+(>|$)/g, "");
+       return text ? text.replace(/<\/?[^>]+(>|$)/g, "") : "";;
      }
+     
     
     return (
       <div>
         <Card className="card-container">
-          <Card.Img className="card-image" variant="top" src={randomRecipe.image}/>
-      <Card.Body>
-        <Card.Title>{randomRecipe.title}</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">Health Score: {randomRecipe.healthScore}</Card.Subtitle>
-        <Card.Text>
-          {removeTags(randomRecipe.summary)} 
-        </Card.Text>
-      </Card.Body>
-    </Card>
+          <Card.Img
+            className="card-image"
+            variant="top"
+            src={randomRecipe.image}
+          />
+          <Card.Body>
+            <Card.Title>{randomRecipe.title}</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">
+              Health Score: {randomRecipe.healthScore}
+            </Card.Subtitle>
+            <Card.Text className="card-text">
+              {removeTags(randomRecipe.summary)}
+            </Card.Text>
+          </Card.Body>
+        </Card>
       </div>
     );
 }
