@@ -19,7 +19,7 @@ import axios from "axios";
      //removed the [0] index to try to generate more recipes for the plan meals cards
    };
    fetchData();
-  //  console.log(newRecipe.summary);
+  //  console.log(newRecipe[0].analyzedInstructions[0].steps);
   //  console.log(typeof(newRecipe))
  }, []);
  return [newRecipe]
