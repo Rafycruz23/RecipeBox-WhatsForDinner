@@ -12,15 +12,19 @@ export default function Navbar() {
   async function handleSearch(event){
     event.preventDefault();
     try{
-      const apiKey = "5a312119fa95425c8af9a9236717e2b5";
-      // const apiKey = "8959366c723444e08598151392a0775e";
+      // const apiKey = "5a312119fa95425c8af9a9236717e2b5";
+      const apiKey = "8959366c723444e08598151392a0775e";
       const response = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?query=${searchTerm}&apiKey=${apiKey}`);
-      setResults(response.data);
-      console.log(response.data)
+      setResults(response.data.results);
+      console.log(results)
+      
+      for(let i = 0; i<results.length; i++){
+        console.log(results)
+      }
+      
     } catch (error){
       console.log(error);
       console.log(searchTerm)
-      console.log(results)
     }
   }
 
