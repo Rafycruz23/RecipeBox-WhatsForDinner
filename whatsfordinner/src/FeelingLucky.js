@@ -11,6 +11,8 @@ export default function FeelingLucky(){
 
    const [display, setDisplay] = useState("false");
 
+  //  const listItems = randomRecipe.extendedIngredients.map((ingredients)=><li>{ingredients}</li>);
+
    const handleClick = () =>{
     setDisplay (!display);
    }
@@ -38,8 +40,15 @@ export default function FeelingLucky(){
               {removeTags(randomRecipe.summary)}
             </Card.Text>
             <div> 
+              <br></br>
              {!display && (
-              <Card.Text>{removeTags(randomRecipe.summary)}</Card.Text>
+              <Card.Text><ul>{randomRecipe.extendedIngredients.map((ingredients)=><li>{ingredients.name}</li>)}</ul></Card.Text>
+             )}
+              <br></br>
+            </div>
+            <div> 
+             {!display && (
+              <Card.Text>{removeTags(randomRecipe.instructions)}</Card.Text>
              )}
             </div>
             <Button variant="primary" onClick={handleClick}>Get Recipe</Button>

@@ -15,12 +15,12 @@ export default function Navbar() {
       // const apiKey = "5a312119fa95425c8af9a9236717e2b5";
       const apiKey = "8959366c723444e08598151392a0775e";
       const response = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?query=${searchTerm}&apiKey=${apiKey}`);
-      setResults(response.data.results);
+      setResults(response.data.results[0]);
       console.log(results)
       
-      for(let i = 0; i<results.length; i++){
-        console.log(results)
-      }
+      // for(let i = 0; i<results.length; i++){
+      //   console.log(results)
+      // }
       
     } catch (error){
       console.log(error);
@@ -40,7 +40,7 @@ export default function Navbar() {
         <li>
           <Link to="/all">Feeling Lucky</Link>
         </li>
-        <form className="d-flex" role="search" onSubmit={handleSearch}>
+        <form className="d-flex" role="search" >
           <input
             className="form-control me-3"
             value={searchTerm}
@@ -48,7 +48,7 @@ export default function Navbar() {
             placeholder="Search"
             onChange={(event)=> setSearchTerm(event.target.value)}
             />
-          <button className="btn btn-outline-success"> 
+          <button className="btn btn-outline-success" onClick={handleSearch}> 
             Search
          </button>
         </form>
