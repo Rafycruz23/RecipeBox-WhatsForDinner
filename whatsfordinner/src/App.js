@@ -5,7 +5,7 @@ import "./styles.css"
 import {Route, Routes} from 'react-router-dom';
 import FeelingLucky from "./FeelingLucky";
 import PlanMeals from './PlanMeals';
-import SearchRecipe from './SearchRecipe'
+import SearchRecipe from './SearchRecipe';
 import React from 'react';
 import Footer from "./Footer";
 
@@ -20,6 +20,7 @@ export default function App () {
         <Route path="/plan" element={<PlanMeals />} />
         <Route path="/feellucky" element={<FeelingLucky />} />
         <Route path='/search' element={<SearchRecipe />}/>
+        
       </Routes>
       <Footer/>
     </div>
