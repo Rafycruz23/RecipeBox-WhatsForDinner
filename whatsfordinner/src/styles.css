@@ -1,109 +1,110 @@
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
 
-.container{
-    margin: 0;
+.container {
+  margin: 0;
 }
-.nav{
-    height: 100px;
-    background-color: antiquewhite;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;   
-    padding: 0 2em;
-    
-}
-
-.nav img{
-    display: flex;
-    height: 80px;
-    border-radius: 50%;
+.nav {
+  height: 300px;
+  background-image: linear-gradient(#73a580, white);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px 2em;
 }
 
-.nav ul{
-    margin: 0;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+.nav img {
+  display: flex;
+  height: 150px;
+  border-radius: 50%;
 }
 
-.nav a{
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: black;
+.nav ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
-.nav a:hover{
-    color: rgb(57, 193, 145)
+
+.nav a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
 }
-
-
-
+.nav a:hover {
+  /* color: rgb(57, 193, 145) */
+  color: #73a580;
+}
 
 /* Carousel styling */
 
-.home-container{
-    height: 100vh;
+.home-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.carousel {
+  margin-top: 50px;
+  height: fit-content;
+  width: fit-content;
+}
+
+.carousel-item img {
+  height: 500px;
+  opacity: 0.8;
+  width: 500px;
+  border-radius: 10px;
+  border: solid #2F4936 2px;
+}
+
+.about {
     display: flex;
-    justify-content:center
+    flex-direction: column;
+    
 }
-
-.carousel{
-    margin-top: 50px;
-    height: fit-content;
-    width: fit-content;    
-}
-
-
-.carousel-item img{
-    height: 300px;
-    opacity: .8;
-    width: 300px;
-    border-radius: 10px;
-}
-
 
 /* Bootstrap Card Element */
 
-.plan-meal{
-    
-    display: flex; 
-    flex-direction: row;
-    flex-wrap: wrap;
+.plan-meal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.card-container{
-    
-    margin: 50px 20px 50px 20px;
-    width: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.card-container {
+  margin: 50px 20px 50px 20px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.card-image{
-    margin-top: 10px;
-    border-radius: 10px;
-    width:300px;
+.card-image {
+  margin-top: 10px;
+  border-radius: 10px;
+  width: 300px;
 }
 
-
-.footer{
-
-    width: 100%;
-    height: 100px;
-    position:relative;
-    
-    background-color: antiquewhite;
+.footer {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  color: white;
+  background-color: #73a580;
 }
 
-.footer,p{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    margin: 0px;
+.footer,
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
 }

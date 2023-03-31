@@ -1,4 +1,4 @@
-import logo from "./assets/Logo.png";
+import logo from "./assets/RecipeBox.png";
 import { Link } from "react-router-dom"; //this replaces the a tags with Link, to move around pages.
 import { useState } from "react";
 import axios from "axios";
@@ -45,11 +45,11 @@ export default function Navbar() {
             className="form-control me-3"
             value={searchTerm}
             type="text"
-            placeholder="Search"
+            placeholder="search by ingredient"
             onChange={(event)=> setSearchTerm(event.target.value)}
             />
-          <button className="btn btn-outline-success"> 
-            Search
+          <button className="btn btn-light" style={{color: '#73a580',border: 'solid #73a580' }}> 
+            Find Recipe
          </button>
         </form>
       </ul>

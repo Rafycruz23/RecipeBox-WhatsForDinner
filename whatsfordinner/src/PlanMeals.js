@@ -14,7 +14,7 @@ export default function PlanMeals(){
       return text.replace(/<\/?[^>]+(>|$)/g, "");
     }
   
-   
+   console.log(randomRecipe)
     return (
       //this works, but looks terrible!
       <div className="plan-meal">
