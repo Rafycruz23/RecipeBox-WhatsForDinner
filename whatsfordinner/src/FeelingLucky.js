@@ -42,7 +42,7 @@ export default function FeelingLucky(){
             <div> 
               <br></br>
              {!display && (
-              <Card.Text><ul>{randomRecipe.extendedIngredients.map((ingredients)=><li>{ingredients.name}</li>)}</ul></Card.Text>
+              <Card.Text><ul>Ingredients: {randomRecipe.extendedIngredients.map((ingredients)=><li>{ingredients.name}</li>)}</ul></Card.Text>
              )}
               <br></br>
             </div>
@@ -50,8 +50,9 @@ export default function FeelingLucky(){
              {!display && (
               <Card.Text>{removeTags(randomRecipe.instructions)}</Card.Text>
              )}
+            <br></br>
             </div>
-            <Button variant="primary" onClick={handleClick}>Get Recipe</Button>
+            <Button variant="primary" onClick={handleClick}>Show Recipe</Button>
           </Card.Body>
         </Card>
       </div>

@@ -1,7 +1,9 @@
 
-import React from 'react';
 import useGetRecipes from "./useGetRecipes";
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import React, { useState } from "react";
+
  
 
 export default function PlanMeals(){
@@ -14,6 +16,12 @@ export default function PlanMeals(){
       return text.replace(/<\/?[^>]+(>|$)/g, "");
     }
   
+    const [display, setDisplay] = useState("false");
+
+
+    const handleClick = () =>{
+      setDisplay (!display);
+     }
    
     return (
       //this works, but looks terrible!
@@ -27,13 +35,19 @@ export default function PlanMeals(){
               <Card.Text className="card-text">
               {removeTags(recipe.summary)}
               </Card.Text>
-              <Card.Link
-                href={recipe.sourceUrl}
-                className="btn btn-primary"
-                target="_blank"
-              >
-                Get Recipe
-              </Card.Link>
+              <div> 
+              <br></br>
+             {!display && (
+              <Card.Text><ul>Ingredients: {recipe.extendedIngredients.map((ingredients)=><li>{ingredients.name}</li>)}</ul></Card.Text>
+             )}
+              <br></br>
+            </div>
+            <div> 
+             {!display && (
+              <Card.Text>{removeTags(recipe.instructions)}</Card.Text>
+             )}
+            </div>
+            <Button variant="primary" onClick={handleClick}>Get Recipe</Button>
             </Card.Body>
           </Card>
         ))}

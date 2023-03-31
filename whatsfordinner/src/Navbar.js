@@ -38,7 +38,7 @@ export default function Navbar() {
           <Link to="/plan">Plan My Meals</Link>
         </li>
         <li>
-          <Link to="/all">Feeling Lucky</Link>
+          <Link to="/feellucky">Feeling Lucky</Link>
         </li>
         <form className="d-flex" role="search" >
           <input

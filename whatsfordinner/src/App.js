@@ -18,7 +18,7 @@ export default function App () {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/plan" element={<PlanMeals />} />
-        <Route path="/all" element={<FeelingLucky />} />
+        <Route path="/feellucky" element={<FeelingLucky />} />
         <Route path='/search' element={<SearchRecipe />}/>
       </Routes>
       <Footer/>

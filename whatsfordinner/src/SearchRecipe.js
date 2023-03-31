@@ -1,10 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Card from 'react-bootstrap/Card'
 
 export default function SearchRecipe () {
   
+
   return (
     <div>
-        <Card className="card-container">
+        {/* <Card className="card-container">
           <Card.Img className="card-image" variant="top" src={randomRecipe.image}/>
          <Card.Body>
             <Card.Title>{randomRecipe.title}</Card.Title>
@@ -13,7 +15,7 @@ export default function SearchRecipe () {
           {randomRecipe.summary} 
             </Card.Text>
         </Card.Body>
-        </Card>
+        </Card> */}
     </div>
   )
 }
