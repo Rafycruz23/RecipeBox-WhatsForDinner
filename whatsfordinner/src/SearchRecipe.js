@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function SearchRecipe () {
+  
   return (
     <div>
         <Card className="card-container">

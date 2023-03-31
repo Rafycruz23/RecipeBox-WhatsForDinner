@@ -7,8 +7,8 @@ import axios from "axios";
 
  function useGetRecipes(endpoint, count) {
  const [newRecipe, setRecipe] = useState([]);
- const apiKey = "5a312119fa95425c8af9a9236717e2b5";
-// const apiKey = "8959366c723444e08598151392a0775e";
+//  const apiKey = "5a312119fa95425c8af9a9236717e2b5";
+const apiKey = "8959366c723444e08598151392a0775e";
  useEffect(() => {
    const fetchData = async () => {
      const response = await axios.get(
