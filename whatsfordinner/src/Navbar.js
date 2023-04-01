@@ -40,17 +40,21 @@ export default function Navbar() {
         <li>
           <Link to="/feellucky">Feeling Lucky</Link>
         </li>
-        <form className="d-flex" role="search" >
+        <form className="d-flex" role="search">
           <input
             className="form-control me-3"
             value={searchTerm}
             type="text"
             placeholder="search by ingredient"
-            onChange={(event)=> setSearchTerm(event.target.value)}
-            />
-          <button className="btn btn-light" style={{color: '#73a580',border: 'solid #73a580' }} onClick={handleSearch}> 
+            onChange={(event) => setSearchTerm(event.target.value)}
+          />
+          <button
+            className="btn btn-light"
+            style={{ color: "#73a580", border: "solid #73a580" }}
+            onClick={handleSearch}
+          >
             Find Recipe
-         </button>
+          </button>
         </form>
       </ul>
     </nav>
