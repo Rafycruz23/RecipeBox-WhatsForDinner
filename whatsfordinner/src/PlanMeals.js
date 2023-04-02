@@ -9,7 +9,7 @@ import React, { useState } from "react";
 export default function PlanMeals(){
 
   //by passing in the parameter of 7, it is used in the API as the count to generate 7 recipes
-    const [randomRecipe] = useGetRecipes("random", 7);
+    const [randomRecipe] = useGetRecipes("random", 4);
     
     //this function removes the HTML tags from the summary portion of the recipe. It is called in the text portion of the card
     function removeTags(text) {
@@ -24,8 +24,14 @@ export default function PlanMeals(){
      }
    
     return (
-      //this works, but looks terrible!
+      
       <div className="plan-meal">
+        <div>
+        <h3>Here are four recipes to give you some culinary inspiration. Need more ideas?</h3>
+        
+        <button className="btn btn-light"
+            style={{ color: "#73a580", border: "solid #73a580" }} onClick={randomRecipe}>More Recipes</button>
+        </div>
         
         {randomRecipe.map((recipe) => (
           <Card className="card-container">

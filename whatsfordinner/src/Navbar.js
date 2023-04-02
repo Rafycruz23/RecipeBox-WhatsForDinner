@@ -35,11 +35,11 @@ export default function Navbar() {
       </Link>
       <ul>
         <li>
-          <Link to="/plan">Plan My Meals</Link>
+          <Link to="/plan">Inspire me!</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/feellucky">Feeling Lucky</Link>
-        </li>
+        </li> */}
         <form className="d-flex" role="search">
           <input
             className="form-control me-3"
