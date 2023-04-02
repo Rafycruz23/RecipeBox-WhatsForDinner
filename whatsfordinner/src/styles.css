@@ -48,6 +48,7 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
   
 }
 
@@ -58,14 +59,15 @@ body {
 }
 
 .carousel-item img {
-  height: 500px;
+  height: 450px;
   opacity: 0.8;
-  width: 500px;
+  width: 450px;
   border-radius: 10px;
   border: solid #2F4936 2px;
 }
 
 .about {
+    margin-left: 70px;
     display: flex;
     flex-direction: column;
     
