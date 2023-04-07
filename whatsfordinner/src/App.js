@@ -2,7 +2,6 @@
 import Home from "./Home";
 import "./styles.css" 
 import {Route, Routes} from 'react-router-dom';
-import FeelingLucky from "./FeelingLucky";
 import SearchRecipe from './SearchRecipe';
 import React from 'react';
 import Footer from "./Footer";
@@ -76,7 +75,6 @@ export default function App () {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/inspired" element={<Inspired />} />
-        <Route path="/feellucky" element={<FeelingLucky />} />
         <Route path='/search' element={<SearchRecipe results={results}/>}/>
       </Routes>
       <Footer/>
