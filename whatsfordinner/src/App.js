@@ -32,6 +32,7 @@ export default function App () {
       console.log(error);
       console.log(searchTerm)
     }
+    setSearchTerm("")
     return results
   }
   console.log(results)

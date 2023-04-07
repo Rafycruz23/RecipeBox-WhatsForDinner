@@ -1,27 +1,29 @@
 import React from 'react';
-// import Card from 'react-bootstrap/Card'
+import Card from 'react-bootstrap/Card'
 
 export default function SearchRecipe (props) {
   
-  const recipe = props.results[0].title
-  console.log(recipe)
+  const recipes = props.results;
+  console.log(recipes)
 
   return (
     <div>
       SearchRecipe is working
-     <p>{recipe}</p>
+     <p>{recipes.title}</p>
      
-
-        {/* <Card className="card-container">
-          <Card.Img className="card-image" variant="top" src={randomRecipe.image}/>
+  {recipes.map((recipe)=> 
+  
+        <Card className="card-container">
+          <Card.Img className="card-image" variant="top" src={recipe.image}/>
          <Card.Body>
-            <Card.Title>{results.title}</Card.Title>
-         <Card.Subtitle className="mb-2 text-muted">Health Score: {randomRecipe.healthScore}</Card.Subtitle>
+            <Card.Title>{recipe.title}</Card.Title>
             <Card.Text>
-          {randomRecipe.summary} 
+          {recipe.summary} 
             </Card.Text>
         </Card.Body>
-        </Card> */}
+        </Card>
+ 
+          )}
     </div>
   )
 }
