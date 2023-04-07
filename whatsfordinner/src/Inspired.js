@@ -6,7 +6,7 @@ import React, { useState } from "react";
 
  
 
-export default function PlanMeals(){
+export default function Inspired(){
 
   //by passing in the parameter of 7, it is used in the API as the count to generate 7 recipes
     const [randomRecipe] = useGetRecipes("random", 4);

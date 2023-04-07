@@ -11,7 +11,6 @@ export default function FeelingLucky(){
 
    const [display, setDisplay] = useState("false");
 
-  //  const listItems = randomRecipe.extendedIngredients.map((ingredients)=><li>{ingredients}</li>);
 
    const handleClick = () =>{
     setDisplay (!display);

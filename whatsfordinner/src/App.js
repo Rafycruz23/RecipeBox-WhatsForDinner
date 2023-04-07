@@ -3,7 +3,6 @@ import Home from "./Home";
 import "./styles.css" 
 import {Route, Routes} from 'react-router-dom';
 import FeelingLucky from "./FeelingLucky";
-import PlanMeals from './PlanMeals';
 import SearchRecipe from './SearchRecipe';
 import React from 'react';
 import Footer from "./Footer";
@@ -11,6 +10,7 @@ import logo from "./assets/RecipeBox.png";
 import { Link, useNavigate } from "react-router-dom"; //this replaces the a tags with Link, to move around pages.
 import { useState } from "react";
 import axios from "axios";
+import Inspired from "./Inspired";
 
 
 export default function App () {
@@ -35,7 +35,7 @@ export default function App () {
     setSearchTerm("")
     return results
   }
-  console.log(results)
+  // console.log(results)
   
 
   return (
@@ -49,7 +49,7 @@ export default function App () {
       </Link>
       <ul>
         <li>
-          <Link to="/plan">Inspire me!</Link>
+          <Link to="/inspired">Inspire me!</Link>
         </li>
         {/* <li>
           <Link to="/feellucky">Feeling Lucky</Link>
@@ -75,7 +75,7 @@ export default function App () {
             
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/plan" element={<PlanMeals />} />
+        <Route path="/inspired" element={<Inspired />} />
         <Route path="/feellucky" element={<FeelingLucky />} />
         <Route path='/search' element={<SearchRecipe results={results}/>}/>
       </Routes>
