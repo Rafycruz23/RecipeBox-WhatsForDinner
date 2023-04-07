@@ -1,16 +1,15 @@
 import React from 'react';
-import recipes from './Navbar';
 // import Card from 'react-bootstrap/Card'
 
 export default function SearchRecipe (props) {
   
-  console.log(props.recipes)
-  console.log(recipes)
+  const recipe = props.results[0].title
+  console.log(recipe)
 
   return (
     <div>
       SearchRecipe is working
-     <p>{props.recipes}</p>
+     <p>{recipe}</p>
      
 
         {/* <Card className="card-container">
