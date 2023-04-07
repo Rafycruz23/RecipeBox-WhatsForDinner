@@ -1,5 +1,5 @@
 import logo from "./assets/RecipeBox.png";
-import { Link } from "react-router-dom"; //this replaces the a tags with Link, to move around pages.
+import { Link, useNavigate } from "react-router-dom"; //this replaces the a tags with Link, to move around pages.
 import { useState } from "react";
 import axios from "axios";
 
@@ -8,6 +8,7 @@ export default function Navbar() {
   
   const [searchTerm, setSearchTerm] = useState("");
   const [results, setResults] = useState([])
+  const navigate = useNavigate();
 
   async function handleSearch(event){
     event.preventDefault();
@@ -15,18 +16,16 @@ export default function Navbar() {
       // const apiKey = "5a312119fa95425c8af9a9236717e2b5";
       const apiKey = "8959366c723444e08598151392a0775e";
       const response = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?query=${searchTerm}&apiKey=${apiKey}`);
-      setResults(response.data.results[0]);
-      console.log(results)
-      
-      // for(let i = 0; i<results.length; i++){
-      //   console.log(results)
-      // }
-      
-    } catch (error){
-      console.log(error);
-      console.log(searchTerm)
+      setResults(response.data.results);
+        
+        navigate("/search")
+      } catch (error){
+        console.log(error);
+        console.log(searchTerm)
+      }
+      return results
     }
-  }
+    console.log(results)
 
   return (
     <nav className="nav">

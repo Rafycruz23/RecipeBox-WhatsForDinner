@@ -20,7 +20,6 @@ export default function App () {
         <Route path="/plan" element={<PlanMeals />} />
         <Route path="/feellucky" element={<FeelingLucky />} />
         <Route path='/search' element={<SearchRecipe />}/>
-        
       </Routes>
       <Footer/>
     </div>

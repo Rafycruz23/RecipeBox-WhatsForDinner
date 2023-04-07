@@ -26,14 +26,14 @@ export default function PlanMeals(){
      //button doesn't work to re-generate the new recipes. 
     return (
       <div className="plan-meal">
-        <div>
+        <div className="">
           <h3>Here are four recipes to give you some culinary inspiration.</h3>
           <span>Need more ideas?</span>
 
           <button
             className="btn btn-light"
             style={{ color: "#73a580", border: "solid #73a580" }}
-            onClick={useGetRecipes("random", 4)}
+            // onClick={useGetRecipes}
           >
             More Recipes
           </button>

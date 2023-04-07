@@ -1,11 +1,18 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card'
+import recipes from './Navbar';
+// import Card from 'react-bootstrap/Card'
 
-export default function SearchRecipe () {
+export default function SearchRecipe (props) {
   
+  console.log(props.recipes)
+  console.log(recipes)
 
   return (
     <div>
+      SearchRecipe is working
+     <p>{props.recipes}</p>
+     
+
         {/* <Card className="card-container">
           <Card.Img className="card-image" variant="top" src={randomRecipe.image}/>
          <Card.Body>
